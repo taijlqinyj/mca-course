@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="Encoding" native2AsciiForPropertiesFiles="true" defaultCharsetForPropertiesFiles="UTF-8">
+    <file url="file://$PROJECT_DIR$" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/main/java/com/mca/juc/c_001_03_Ordering/T03_ThisEscape.java" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/src/main/java/com/mca/juc/mine_interview_A1B2C3/T00_Question.java" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/src/main/java/com/mca/juc/mine_interview_A1B2C3/T01_LockSupport.java" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/src/main/java/com/mca/juc/mine_interview_A1B2C3/T02_sync_wait_notify.java" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/src/main/java/com/mca/juc/mine_interview_A1B2C3/T03_lock_condition.java" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/src/main/java/com/mca/juc/mine_threadPool/T06_00_Future.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/main/java/com/mca/juc/mine_threadPool/T12_WorkStealingPool.java" charset="UTF-8" />
+    <file url="PROJECT" charset="UTF-8" />
+  </component>
+</project>

@@ -1,0 +1,31 @@
+bus_order 表，表中有id字段，现在要按照 id 的奇偶性进行切分，切分到不同的表中
+1、分到同一个库的不同表 ----> application-one.properties
+
+bus_order 表，表中有 id，customer_id 字段，现在先按照 customer_id 字段取模分库，再按照 id 的奇偶性进行分表
+2、分到不同库的不同表 ----> application-two.properties
+
+bus_order 表，指定放到 ds0 数据节点，bus_custom 表，指定放到 ds1 数据节点
+3、垂直分库 == 指定不同的表分布在不同的库 ----> application-three.properties
+
+spring.shardingsphere.sharding.broadcast-tables
+4、广播表 ----> application-four.properties
+
+bus_order 表和 bus_order_detail 表，spring.shardingsphere.sharding.binding-tables
+5、绑定表 ----> application-five.properties
+
+6、全局序列ID，默认雪花算法，指定后未生效问题 ----> application-six.properties
+
+7、配置读写分离，提前部署好MySQL主从同步 ----> application-seven.properties
+
+8、ShardingSphere 使用 ThreadLocal 管理分片键值进行Hint强制路由。
+可以通过编程的方式向 HintManager 中添加分片值，该分片值仅在当前线程内生效。
+Hint方式主要使用场景：
+-- 分片字段不存在SQL中、数据库表结构中，而存在于外部业务逻辑。
+-- 强制在主库进行某些数据操作。
+----> hint-databases-only.yaml
+----> hint-databases-tables.yaml
+----> hint-master-only.yaml
+
+数据分片的两个场景：
+1、所有的数据库都是新的，再创建之初就已经指定好了分片规则
+2、在已有数据库的基础之上进行数据分片（新插入的数据要进行对应的分片，同时完成老数据的数据迁移工作）

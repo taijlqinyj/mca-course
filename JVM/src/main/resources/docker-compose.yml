@@ -1,0 +1,17 @@
+# version 版本，可官网查询
+version: "3.9"
+# 服务列表，多个
+services:
+  # 服务名称
+  rabbitmq1:
+    # 服务镜像
+    image: rabbitmq:3.9.29-management-alpine
+    # 服务容器名称
+    container_name: rabbitmq1
+    # 服务容器挂载目录
+    volumes:
+      - /opt/docker/image/rabbitmq/:/var/lib/rabbitmq/
+    # 服务容器映射宿主机地址
+    ports:
+      - 5672:5672
+      - 15672:15672

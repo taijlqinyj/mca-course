@@ -1,0 +1,17 @@
+version: "3.9"
+services:
+  rabbitmq3:
+    image: rabbitmq:3.9.29-management-alpine
+    container_name: rabbitmq3
+    hostname: rabbitmq3
+    extra_hosts:
+      - "rabbitmq1:192.168.136.148"
+      - "rabbitmq2:192.168.136.140"
+      - "rabbitmq3:192.168.136.147"
+    environment:
+      - RABBITMQ_ERLANG_COOKIE=shuibuxihuantjl
+    ports:
+      - 5672:5672
+      - 15672:15672
+      - 4369:4369
+      - 25672:25672
